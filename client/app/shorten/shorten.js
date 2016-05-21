@@ -2,13 +2,14 @@ angular.module('shortly.shorten', [])
 
 .controller('ShortenController', function ($scope, $location, Links) {
   // Your code here
-  $scope.link = '';
+  $scope.link = {};
   $scope.data = {
     links: []
   };
 
   $scope.addLink = function() {
-    Links.addOne({url: $scope.link})
+    console.log($scope.link);
+    Links.addOne($scope.link)
       .then(function(data) {
         console.log(data);
         $scope.data.links.push(data);
