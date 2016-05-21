@@ -13,14 +13,5 @@ angular.module('shortly.links', [])
       });
   };
 
-  $scope.addOne = function() {
-    Links.addOne($scope.link)
-      .then(function(data) {
-        $scope.data.links.push(data);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-  };
 });
 
