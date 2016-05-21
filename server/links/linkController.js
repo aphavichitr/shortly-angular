@@ -46,7 +46,7 @@ module.exports = {
       })
       .then(function (createdLink) {
         if (createdLink) {
-          res.json(createdLink);
+          res.status(201).json(createdLink);
         }
       })
       .fail(function (error) {

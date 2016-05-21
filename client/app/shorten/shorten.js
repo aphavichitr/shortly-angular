@@ -8,15 +8,13 @@ angular.module('shortly.shorten', [])
   };
 
   $scope.addLink = function() {
-    if ($scope.shortenForm.$valid) {
-      Links.addOne({url: $scope.link})
-        .then(function(data) {
-          console.log(data);
-          $scope.data.links.push(data);
-        })
-        .catch(function (error) {
-          console.error(error);
-        });
-    }
+    Links.addOne({url: $scope.link})
+      .then(function(data) {
+        console.log(data);
+        $scope.data.links.push(data);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   };
 });

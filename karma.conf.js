@@ -14,6 +14,7 @@ module.exports = function (config) {
       // angular source
       'client/lib/angular/angular.js',
       'client/lib/angular-route/angular-route.js',
+      'http://ajax.googleapis.com/ajax/libs/angularjs/1.3.20/angular-messages.js',
       'client/lib/angular-mocks/angular-mocks.js',
 
       // our app code
