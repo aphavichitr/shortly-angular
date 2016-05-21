@@ -13,5 +13,7 @@ angular.module('shortly.links', [])
       });
   };
 
+  $scope.getAll();
+
 });
 
