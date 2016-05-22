@@ -2,11 +2,11 @@
   <h1>signup</h1>
   <form name="signupForm" ng-submit='signup()'>
     <input type='text' name="username" ng-model='user.username' required>
-    <div ng-messages="signinForm.username.$error">
+    <div ng-messages="signupForm.username.$error">
       <div ng-message="required">This field is required</div>
     </div>
     <input type="password" name="password" ng-model='user.password' required>
-    <div ng-messages="signinForm.password.$error">
+    <div ng-messages="signupForm.password.$error">
       <div ng-message="required">This field is required</div>
     </div>  
     <button>signup</button>

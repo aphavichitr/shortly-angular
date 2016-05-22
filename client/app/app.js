@@ -27,6 +27,9 @@ angular.module('shortly', [
       controller: 'ShortenController',
       authenticate: true
     })
+    .when('/signout', {
+      signout: true
+    })
     .otherwise({
       redirectTo: '/links'
     });
@@ -62,6 +65,10 @@ angular.module('shortly', [
   // if it's not valid, we then redirect back to signin/signup
   $rootScope.$on('$routeChangeStart', function (evt, next, current) {
     if (next.$$route && next.$$route.authenticate && !Auth.isAuth()) {
+      $location.path('/signin');
+    }
+    if (next.$$route.signout) {
+      Auth.signout();
       $location.path('/signin');
     }
   });
